@@ -66,7 +66,7 @@ begin
     var s := ReadlnString('Enter difficulty: ');
     if not TryStrToInt(s, n) then
     begin
-      Exec('E&W A');
+      Exec(GetEXEFileName);
       exit;
     end;
   end;
