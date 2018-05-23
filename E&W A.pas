@@ -38,9 +38,12 @@ Rand(
   ''
 );
 
-procedure CreateMessageBoxs(c: integer);
+const
+  max_mb = 3;
+
+procedure CreateMessageBoxs;
 begin
-  loop c do
+  while nn >= max_mb do
   begin
     MessageBox(System.IntPtr.Zero, GetRandomMassage, GetRandomTitle, 
       Rand($2, $6, $0, $1, $5, $4, $3, $4000) or
@@ -53,9 +56,6 @@ begin
     nn -= 1;
   end;
 end;
-
-const
-  max_mb = 10;
 
 begin
   
@@ -76,12 +76,15 @@ begin
   
   ST := System.DateTime.Now;
   
+  {
   var r: integer;
   var d := System.Math.DivRem(n, max_mb, r);
   loop r do (new System.Threading.Thread(procedure->CreateMessageBoxs(d + 1))).Start;
   loop max_mb - r do (new System.Threading.Thread(procedure->CreateMessageBoxs(d))).Start;
+  }
+  loop max_mb do (new System.Threading.Thread(CreateMessageBoxs)).Start;
   
-  while nn <> 0 do Sleep(10);
+  while nn > 0 do Sleep(10);
   
   var t := System.DateTime.Now - ST;
   DT.Abort;
