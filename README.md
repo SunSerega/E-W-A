@@ -2,7 +2,7 @@
 
 From creators of  “CA” and “GA”! (I mean me)
 
-New masterpiece (not) - E&W A!!!!!!!!!!!!!!!!!!!!!
+New masterpiece (not really) - E&W A!!!!!!!!!!!!!!!!!!!!!
 
 Rule’s are easy. You enter difficulty (an integer). App will start to generate windows error’s and warning’s messages. You need to close them. And as fast, as you can. Their count will be equal to difficulty.
 
