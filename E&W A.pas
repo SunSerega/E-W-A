@@ -39,7 +39,7 @@ Rand(
 );
 
 const
-  max_mb = 3;
+  max_mb = 10;
 
 procedure CreateMessageBoxs;
 begin
