@@ -32,7 +32,7 @@ begin
   Sleep(50);
   System.Console.Clear;
   writeln($'There is only {left_to_close} MessageBox''s left.');
-  writeln($'You have allready spend {System.DateTime.Now - ST} on this.');
+  writeln($'You have already spend {System.DateTime.Now - ST} on this.');
 end;
 
 procedure CreateMessageBox := 
@@ -71,7 +71,7 @@ begin
   Sleep(100);
   System.Console.Clear;
   writeln($'Congratulations, you have closed {tb_c} Message Box''s in {t}!');
-  writeln('Now close this piece of art and go rethink your life....');
+  writeln('Now close this piece of... art... and go rethink your life....');
   readln;
   
 end.
